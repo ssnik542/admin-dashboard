@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/dashboard",
+        path: "/admin/dashboard",
         element: (
           <Suspense fallback={<Loader />}>
             <Dashboard />
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/products",
+        path: "/admin/products",
         element: (
           <Suspense fallback={<Loader />}>
             <Products />{" "}
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/customers",
+        path: "/admin/customers",
         element: (
           <Suspense fallback={<Loader />}>
             {" "}
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/transaction",
+        path: "/admin/transaction",
         element: (
           <Suspense fallback={<Loader />}>
             <Transaction />
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/transaction/:id",
+        path: "/admin/transaction/:id",
         element: <TransactionManagement />,
       },
       {
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/pie",
+        path: "/admin/pie",
         element: (
           <Suspense fallback={<Loader />}>
             <Pie />
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/line",
+        path: "/admin/line",
         element: (
           <Suspense fallback={<Loader />}>
             <Line />
@@ -84,27 +84,27 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/stopwatch",
+        path: "/admin/stopwatch",
         element: <Stopwatch />,
         loader: Loader,
       },
       {
-        path: "/coupon",
+        path: "/admin/coupon",
         element: <Coupon />,
         loader: Loader,
       },
       {
-        path: "/toss",
+        path: "/admin/toss",
         element: <Toss />,
         loader: Loader,
       },
       {
-        path: "/product/new",
+        path: "/admin/product/new",
         element: <Product />,
         loader: Loader,
       },
       {
-        path: "/product/:id",
+        path: "/admin/product/:id",
         element: <ProductManagement />,
         loader: Loader,
       },
