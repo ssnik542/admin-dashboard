@@ -19,11 +19,11 @@ const Pie = lazy(() => import("./pages/charts/Pie.tsx"));
 const Line = lazy(() => import("./pages/charts/Line.tsx"));
 const router = createBrowserRouter([
   {
-    path: "/admin",
+    path: "/",
     element: <App />,
     children: [
       {
-        path: "/admin/dashboard",
+        path: "/dashboard",
         element: (
           <Suspense fallback={<Loader />}>
             <Dashboard />
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/admin/products",
+        path: "/products",
         element: (
           <Suspense fallback={<Loader />}>
             <Products />{" "}
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/admin/customers",
+        path: "/customers",
         element: (
           <Suspense fallback={<Loader />}>
             {" "}
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/admin/transaction",
+        path: "/transaction",
         element: (
           <Suspense fallback={<Loader />}>
             <Transaction />
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/admin/transaction/:id",
+        path: "/transaction/:id",
         element: <TransactionManagement />,
       },
       {
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/admin/pie",
+        path: "/pie",
         element: (
           <Suspense fallback={<Loader />}>
             <Pie />
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/admin/line",
+        path: "/line",
         element: (
           <Suspense fallback={<Loader />}>
             <Line />
@@ -84,27 +84,27 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/admin/stopwatch",
+        path: "/stopwatch",
         element: <Stopwatch />,
         loader: Loader,
       },
       {
-        path: "/admin/coupon",
+        path: "/coupon",
         element: <Coupon />,
         loader: Loader,
       },
       {
-        path: "/admin/toss",
+        path: "/toss",
         element: <Toss />,
         loader: Loader,
       },
       {
-        path: "/admin/product/new",
+        path: "/product/new",
         element: <Product />,
         loader: Loader,
       },
       {
-        path: "/admin/product/:id",
+        path: "/product/:id",
         element: <ProductManagement />,
         loader: Loader,
       },
